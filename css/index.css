@@ -1,0 +1,19 @@
+.home-info {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  align-items: center;
+  justify-content: center;
+}
+.welcome {
+  font-size: 30px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+.login,
+.register {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: lighter;
+}
