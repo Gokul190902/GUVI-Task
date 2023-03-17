@@ -7,14 +7,16 @@
   border: 2px;
 }
 .welcome {
-  font-size: 30px;
+  font-size: 25px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-weight: bold;
 }
 .login,
 .register {
+  padding-top: 20px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-weight: lighter;
+  font-size: 14px;
 }

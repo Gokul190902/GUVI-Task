@@ -5,9 +5,14 @@
   align-items: center;
   justify-content: center;
 }
-.heading,
+
 p {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  font-weight: lighter;
+  font-weight: normal;
+}
+.heading {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: bold;
 }
