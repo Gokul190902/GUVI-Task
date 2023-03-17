@@ -43,7 +43,7 @@ $(document).ready(function () {
   //check the session is valid or not
   $.ajax({
     type: "POST",
-    url: "http://localhost/Project/php/profile.php",
+    url: "http://localhost/Guvi-Task/php/profile.php",
     data: { action: "valid-session", redisId: localStorage.getItem("redisId") },
     success: function (response) {
       let res = JSON.parse(response);
@@ -53,7 +53,7 @@ $(document).ready(function () {
           "Something went wrong..., Login Again to Continue , You Will Be Redirected"
         );
         setTimeout(() => {
-          window.location.href = "http://localhost/Project/login.html";
+          window.location.href = "http://localhost/Guvi-Task/login.html";
         }, 3000);
       }
     },
@@ -61,7 +61,7 @@ $(document).ready(function () {
 
   //get the data
   $.ajax({
-    url: "http://localhost/Project/php/profile.php",
+    url: "http://localhost/Guvi-Task/php/profile.php",
     type: "POST",
     data: { action: "get-data", redisId: localStorage.getItem("redisId") },
     success: function (response) {
@@ -103,7 +103,7 @@ $(document).ready(function () {
 
     //send the updated data
     $.ajax({
-      url: "http://localhost/Project/php/profile.php",
+      url: "http://localhost/Guvi-Task/php/profile.php",
       type: "POST",
       data: { action: "update-data", email, data },
       success: function (response) {
@@ -127,7 +127,7 @@ $("#logout-button").click(function (e) {
   e.preventDefault();
   $.ajax({
     type: "POST",
-    url: "http://localhost/Project/php/profile.php",
+    url: "http://localhost/Guvi-Task/php/profile.php",
     data: { action: "logout", redisId: localStorage.getItem("redisId") },
     success: function (response) {
       let res = JSON.parse(response);
@@ -136,7 +136,7 @@ $("#logout-button").click(function (e) {
         showSuccessMessage(res.message + " Redirecting to login page...");
 
         setTimeout(function () {
-          window.location.href = "http://localhost/Project/login.html";
+          window.location.href = "http://localhost/Guvi-Task/login.html";
         }, 3000);
       }
     },

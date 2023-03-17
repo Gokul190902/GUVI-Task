@@ -4,6 +4,7 @@
   padding-top: 50px;
   align-items: center;
   justify-content: center;
+  border: 2px;
 }
 .welcome {
   font-size: 30px;

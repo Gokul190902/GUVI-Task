@@ -1,6 +1,6 @@
 $(document).ready(function () {
   if (localStorage.getItem("redisId")) {
-    window.location.replace("http://localhost/Project/profile.html");
+    window.location.replace("http://localhost/Guvi-Task/profile.html");
   }
 });
 $("#register-form").submit(function (event) {
@@ -16,11 +16,11 @@ $("#register-form").submit(function (event) {
   };
   $.ajax({
     type: "POST",
-    url: "http://localhost/project/php/register.php",
+    url: "http://localhost/Guvi-Task/php/register.php",
     data: formData,
 
     success: function (response) {
-      window.location.href = "http://localhost/Project/login.html";
+      window.location.href = "http://localhost/Guvi-Task/login.html";
       // console.log(response);
       // let res = JSON.parse(response);
       // if (res.message == "Success") {
