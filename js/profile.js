@@ -39,12 +39,19 @@ function showErrorMessage(message) {
 }
 
 $(document).ready(function () {
+  $.getJSON("https://api.ipify.org?format=json", function (data) {
+    // Setting text of element P with id gfg
+    console.log(data.ip);
+  });
   $("#loading-message").show();
   //check the session is valid or not
   $.ajax({
     type: "POST",
     url: "http://localhost/Guvi-Task/php/profile.php",
-    data: { action: "valid-session", redisId: localStorage.getItem("redisId") },
+    data: {
+      action: "valid-session",
+      redisId: localStorage.getItem("redisId"),
+    },
     success: function (response) {
       let res = JSON.parse(response);
 

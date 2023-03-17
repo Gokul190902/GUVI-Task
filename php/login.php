@@ -1,4 +1,10 @@
 <?php 
+$redis = new Redis();
+$redis->connect('127.0.0.1', 6379);
+
+ini_set('session.save_handler', 'redis');
+ini_set('session.save_path', 'tcp://127.0.0.1:6379');
+
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -9,12 +15,6 @@ $conn = mysqli_connect($servername, $username, $password, $database);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
-
-$redis = new Redis();
-$redis->connect('127.0.0.1', 6379);
-
-ini_set('session.save_handler', 'redis');
-ini_set('session.save_path', 'tcp://127.0.0.1:6379');
 
 
 $email = $_POST["email"];
